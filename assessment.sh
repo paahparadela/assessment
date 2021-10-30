@@ -14,7 +14,7 @@ cat /etc/passwd | cut -d: -f1 >> assessment.txt
 echo "===================================================" >> assessment.txt
 echo "========Pacotes instalados no servidor: (( $(hostname -i) ))" >> assessment.txt
 echo "===================================================" >> assessment.txt
-if [ "$DISTRO" == "Debian" ]
+if [ $1 == "Debian" ]
 then
   echo "Debian"
   dpkg -l >> assessment.txt
